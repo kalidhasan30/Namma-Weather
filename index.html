@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Namma Weather 🌦️</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Leaflet -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin=""/>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
+
+  <!-- Optional config (leave if you have it) -->
+  <script src="config.js" defer></script>
+
+  <!-- Main script -->
+  <script src="script.js" defer></script>
+
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><text y='50%' x='50%' text-anchor='middle' dominant-baseline='central' font-size='22'>🌦️</text></svg>">
+</head>
+<body>
+  <div class="site-shell">
+  <header class="header">Namma Weather <span class="emoji">🌦️</span>
+    <div class="sub">வணக்கம் 🙏 Here’s your travel weather!</div>
+  </header>
+
+  <main class="main">
+    <section class="container">
+      <label for="start">Start City / Town (leave empty to use current location)</label>
+      <input id="start" type="text" placeholder="Eg: Arcot" autocomplete="off" />
+      <div id="start-suggestions" class="suggestions" aria-hidden="true"></div>
+
+      <label for="dest">Destination (city / town / village)</label>
+      <input id="dest" type="text" placeholder="Eg: Vellore" autocomplete="off" />
+      <div id="dest-suggestions" class="suggestions" aria-hidden="true"></div>
+
+      <div class="controls">
+        <button id="routeBtn" class="btn btn-primary">Show Route Weather</button>
+        <button id="locBtn" class="btn btn-secondary">Use current location</button>
+      </div>
+
+      <!-- tip removed per request -->
+    </section>
+
+    <aside class="results-pane">
+      <div id="spinner" class="spinner" style="display:none;"></div>
+
+      <!-- map: kept and visible area reserved (script will initialize and show tiles after route) -->
+      <div id="map" style="display:block;height:180px;border-radius:12px;margin-bottom:8px;"></div>
+
+      <div id="results" class="results"></div>
+    </aside>
+  </main>
+
+  <!-- footer removed per request -->
+  </div>
+</body>
+</html>
+</body>
+</html>
