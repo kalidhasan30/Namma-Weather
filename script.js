@@ -1,4 +1,4 @@
-// FINAL script.js (updated ETA formatting to hours + minutes)
+// FINAL script.js
 
 // -------- Helpers --------
 function showSpinner(show){ const s=document.getElementById('spinner'); if(s) s.style.display = show ? 'block' : 'none'; }
